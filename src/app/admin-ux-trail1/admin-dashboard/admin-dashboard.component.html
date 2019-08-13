@@ -1,0 +1,186 @@
+<div>
+  <div class="card">
+    <div class="card-body">
+      <div class="row justify-content-between align-items-center">
+        <div class="col-sm-2">
+          <h3 class="card-title mb-0">
+            <div class="arrow_link">
+              <span>Compute</span>
+            </div>
+          </h3>
+          </div><!--/.col-->
+        <div class="col-sm-6 d-none d-md-block">
+          <div class="medium text-right" style="color:#8f9ba6;">
+            <!-- padding used to align horizontally subtext and heading -->
+            <div class="pt-2">
+              <h5>  Manage computation power your team is using  </h5>
+            </div>
+          </div>
+        </div><!--/.col-->
+      </div><!--/.row ends for header text-->
+
+      <br>
+
+      <div class="row justify-content-center align-items-center">
+        <!-- Card for total instances -->
+        <div class="card-deck">
+          <div class="card">
+          <div class="card-body">
+            <div row>
+              <div class="chart-wrapper">
+                <canvas baseChart class="chart"
+                [labels]="doughnutChartLabels"
+                [chartType]="doughnutChartType"
+                [options]="doughnutChartOptions"
+                [colors]="doughnutChartColours"
+                (chartHover)="chartHovered($event)"
+                (chartClick)="chartClicked($event)"></canvas>
+              </div>
+            </div> <!-- Row ends -->
+          <div class="justify-content-between">
+            <h4 class="text-center"> Total 240 instances in use </h4>
+          </div>
+          </div>
+          </div>
+          <div class="card">
+            <div class="card-body">
+              <div class="progress-group">
+                <div class="progress-group-bars">
+                  <div class="progress progress-xs" style="height:20px;">
+                    <div class="progress-bar bg-danger" role="progressbar" style="width: 97%" aria-valuenow="97" aria-valuemin="0" aria-valuemax="100">97%</div>
+                  </div>
+                </div>
+                <div class="px-2">t2.4xlarge</div>
+              </div>
+              <div class="progress-group">
+                <div class="progress-group-bars">
+                  <div class="progress progress-xs" style="height:20px;">
+                    <div class="progress-bar bg-warning" role="progressbar" style="width: 97%" aria-valuenow="97" aria-valuemin="0" aria-valuemax="100">89%</div>
+                  </div>
+                </div>
+                <div class="px-2">t2.4xlarge</div>
+              </div>
+              <div class="progress-group">
+                <div class="progress-group-bars">
+                  <div class="progress progress-xs" style="height:20px;">
+                    <div class="progress-bar bg-warning" role="progressbar" style="width: 97%" aria-valuenow="97" aria-valuemin="0" aria-valuemax="100">89%</div>
+                  </div>
+                </div>
+                <div class="px-2">t2.4xlarge</div>
+              </div>
+              <div class="progress-group">
+                <div class="progress-group-bars">
+                  <div class="progress progress-xs" style="height:20px;">
+                    <div class="progress-bar bg-warning" role="progressbar" style="width: 97%" aria-valuenow="97" aria-valuemin="0" aria-valuemax="100">89%</div>
+                  </div>
+                </div>
+                <div class="px-2">t2.4xlarge</div>
+              </div>
+            </div>
+
+                  <!-- Padding and margins not working on h4 class-->
+                  <div class="px-4">
+                  <h4 class="text-center mx-4"> 4 instances are near usage limits </h4>
+                  </div>
+              </div><!-- Chart card ends here-->
+          </div> <!-- Card deck ends here -->
+        </div> <!--Row ends here-->
+
+          <hr>
+          <!-- Links section -->
+          <div class="row justify-content-between">
+            <!-- Using spacing classes picked from CoreUI documentation -->
+            <div class="col-sm-6 m-2 px-2 py-1">
+              <div class="h5"> <a href="#"> Instance management </a> </div>
+              <div class="h5"> <a href="#"> Set defaults for instance usage </a> </div>
+            </div>
+            <div class="col-sm-1" style="margin:8px;">
+              <img height="64px" width="64px" src="../../../assets/img/icons/noun_processor_2754875.svg">
+            </div>
+          </div>
+        </div>
+      </div>  <!-- Compute ends here -->
+
+      <div class="card"> <!-- Data sources card -->
+        <div class="card-body">
+
+          <!--Header and subtext -->
+          <div class="row justify-content-between align-items-center">
+            <div class="col-sm-3">
+              <h3 class="card-title mb-0">
+                <div class="arrow_link">
+                  <span>Data sources</span>
+                </div>
+              </h3>
+            </div><!--/.col-->
+            <div class="col-sm-4 d-none d-md-block">
+              <div class="medium text-right" style="color:#8f9ba6;">
+              <!-- padding used to align horizontally subtext and heading -->
+                <div class="pt-2">
+                 <h5> Configure data sources, S3 buckets  </h5>
+                </div>
+              </div>
+
+            </div><!--/.col-->
+          </div><!--/.row ends for header text-->
+
+          <hr>
+
+          <!-- Links section -->
+          <div class="row justify-content-between">
+            <!-- Using spacing classes picked from CoreUI documentation -->
+            <div class="col-sm-6 m-2 px-2 py-1">
+              <div class="h5"> <a href="#"> Manage database sources </a> </div>
+              <div class="h5"> <a href="#"> Project folder management </a> </div>
+            </div>
+            <div class="col-sm-1" style="margin:8px;">
+              <img height="64px" width="64px" src="../../../assets/img/icons/noun_Data_2723012.svg">
+            </div>
+          </div>
+        </div>
+      </div><!-- Data sources Card ends-->
+
+      <div class="card"> <!-- Data sources card -->
+        <div class="card-body">
+
+          <!--Header and subtext -->
+          <div class="row justify-content-between align-items-center">
+            <div class="col-sm-3">
+              <h3 class="card-title mb-0">
+                <div class="arrow_link">
+                  <span>Advance settings</span>
+                </div>
+              </h3>
+            </div><!--/.col-->
+
+
+            <div class="col-sm-4 d-none d-md-block">
+              <div class="medium text-right" style="color:#8f9ba6;">
+              <!-- padding used to align horizontally subtext and heading -->
+                <div class="pt-2">
+                 <h5>  IT configuration and updates  </h5>
+                </div>
+              </div>
+
+            </div><!--/.col-->
+          </div><!--/.row ends for header text-->
+
+          <hr>
+
+          <!-- Links section -->
+          <div class="row justify-content-between">
+            <!-- Using spacing classes picked from CoreUI documentation -->
+            <div class="col-sm-6 m-2 px-2 py-1">
+              <div class="h5"> <a href="#"> Manage workspaces </a> </div>
+              <div class="h5"> <a href="#"> Updates and upgrades </a> </div>
+            </div>
+            <div class="col-sm-1" style="margin:8px;">
+              <img height="64px" width="64px" src="../../../assets/img/icons/noun_Settings_1957326.svg">
+            </div>
+          </div>
+        </div>
+      </div><!-- Data sources Card ends-->
+
+
+
+</div>
